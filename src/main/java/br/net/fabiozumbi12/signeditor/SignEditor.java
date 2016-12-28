@@ -52,7 +52,7 @@ public class SignEditor {
 							int line = args.<Integer>getOne("1-4").get();
 							String text = args.<String>getOne("text (max. length 16)").get();
 							if (line > 4 || line < 1){
-								throw new CommandException(toText("[SignEditor] &4The line need to be below 1-4."));
+								throw new CommandException(toText("[SignEditor] &4The line needs to be between 1-4."));
 							}
 							if (toText(text).toPlain().length() > 16){
 								throw new CommandException(toText("[SignEditor] &4The max length allowed is 16 characters."));
